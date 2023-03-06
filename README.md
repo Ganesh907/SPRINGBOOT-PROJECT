@@ -40,7 +40,6 @@ In this application USER can :
 
 Login Details : 
 --------------------
-
 ADMIN / USER can access this application only if they entered correct Login Details (Userame and Password).
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
