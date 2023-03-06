@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add</title>
+<link href="/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="/css/2.png">&nbsp;N JOY THE TOY</a>
+        <nav>
+            <ul>
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/add}" class="active">Add</a></li>
+               <!-- <li><a th:href="@{/update}">Update</a></li> -->
+                <ul class="gani">
+                <li><a th:href="@{/register}">Register</a></li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="aboutus">
+        <h1>
+            Add TOY
+        </h1>
+    </div>
+	<div class="toyform">
+	
+	
+    <form class="myform"  id="add" method="post" th:action="@{/save}" role="form"
+		th:object="${toy}" >
+		
+        <input type="text" class="inp"  placeholder="Name..." id="login" th:field="*{name}" /><br>
+ 	    <label>Enter Name</label>
+ 	    <label  class="register" th:each="e : ${#fields.errors('name')}" th:text="${e}" >  </label>
+ 	    
+   
+   <br>     <input type="number" class="inp"   th:field="*{price}" /><br>
+        <label>Enter Price  </label>
+    	<label  class="register" th:each="e : ${#fields.errors('price')}" th:text="${e}" >  </label>
+    
+    
+      <br>  <input type="number" class="inp"  th:field="*{quantity}" /><br>
+        <label>Enter Quantity</label>
+        <label  class="register" th:each="e : ${#fields.errors('quantity')}" th:text="${e}" >  </label>
+   
+       <br> <input type="submit" class="mybtn" value="Add Toy">
+    
+    </form>
+</div>	
+    <footer>
+        <div class="name">Developed By : Ganesh Shinde</div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

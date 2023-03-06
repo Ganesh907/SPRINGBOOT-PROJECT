@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="/css/2.png">&nbsp;N JOY THE TOY</a>
+        <nav>
+            <ul>
+               <!--  <li><a th:href="@{/home}">Home</a></li> -->
+                <li><a th:href="@{/home}" class="active" style="position: fixed;right:15px;">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form class="myform" id="loginpage" method="post"  action="#">
+    
+    <div th:if="${param.error}" class="error">
+    Invalid Username and Password
+    </div>
+     <div th:if="${param.logout}" class="error">
+		you have been logout out
+    </div>
+    
+        <input type="text" class="inp" name="username" placeholder="Enter Username" id="login"><br><br>
+        <input type="password" class="inp" name="password" placeholder="Enter Password"><br><br>
+       
+        <a th:href="@{/register}" class="rg">Register Here    </a>
+         <input type="submit" class="mybtn" value="login">
+        
+    </form>
+    
+    <div class="loginimage">
+        <img src="/css/3.png">
+    </div>
+
+    <footer>
+        <div class="name">Developed By : GANESH SHINDE</div>
+    </footer>
+</body>
+
+</html>

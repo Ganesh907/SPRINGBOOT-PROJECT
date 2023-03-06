@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Update</title>
+<link href="/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="/css/2.png">&nbsp;N JOY THE TOY</a>
+        <nav>
+            <ul>
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/add}" >Add</a></li>
+                <li><a th:href="@{/update}" class="active">Update</a></li>
+                <li><a th:href="@{/register}" id="space">Register</a></li>
+                <li><a th:href="@{/login}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="aboutus">
+        <h1>
+            Update TOY
+        </h1>
+    </div>
+	<div class="toyform">
+    <form class="myform" id="add" method="post" th:action="@{/updatetoy/{id} (id=${toy.id})}" role="form"
+		th:object="${toy}" >
+		<!-- <input type="number" class="inp" placeholder="Id" id="login" disabled required th:field="*{id}" /><br><br>  -->
+		
+		
+		
+        <input type="text" class="inp"  id="login" th:field="*{name}" /><br><label>Update Name</label>   
+        <label  class="register" th:each="e : ${#fields.errors('name')}" th:text="${e}" >  </label>
+        <br>
+        
+        
+        <input type="number" class="inp"   th:field="*{price}" /><br><label>Update Price</label>  
+        <label  class="register" th:each="e : ${#fields.errors('price')}" th:text="${e}" >  </label>
+         <br>
+        
+        
+        
+        
+        
+        <input type="number" class="inp"   th:field="*{quantity}" /><br><label>Update Quantity</label> 
+        <label  class="register" th:each="e : ${#fields.errors('quantity')}" th:text="${e}" >  </label>
+          <br>
+        
+        
+        
+       <!-- <input type="text" class="inp" placeholder="Enter Quantity" required th:field><br><br> -->
+        <input type="submit" class="mybtn" value="Update Toy">
+    
+    </form>
+
+    <footer>
+        <div class="name">Developed By : Ganesh Shinde</div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

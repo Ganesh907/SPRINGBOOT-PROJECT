@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="/css/2.png" >&nbsp;N JOY THE TOY</a>
+        <nav>
+            <ul>
+                <li><a th:href="@{/home}">Home</a></li>
+         
+                <ul class="gani">
+                 <li><a th:href="@{/register}" id="space" class="active">Register</a></li> 
+                <li><a th:href="@{/logout}" >Logout</a></li> 
+                </ul>
+            </ul>
+        </nav>
+    </header>
+   
+
+    <div class="aboutus">
+        <h1>
+            Register
+        </h1>
+    </div>
+
+   
+     <form class="myform"  id="add" method="post" th:action="@{/save1}" role="form"
+		th:object="${user}" >
+	
+	<input type="text" class="inp" placeholder="Enter Name" th:field="*{name}" /><br>
+	<label  class="register" th:each="e : ${#fields.errors('name')}" th:text="${e}" > </label>
+	
+  <!-- <span id="valid" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name can't be null</span> -->
+    <br>
+   
+	
+	
+        <input type="password" class="inp" placeholder="Enter Password" th:field="*{passcode}" /><br>
+        <!--  <label>Enter Password  </label><br>  -->
+    <label  class="register" th:each="e : ${#fields.errors('passcode')}" th:text="${e}" >  </label>
+  <br>
+     <input type="text" class="inp" placeholder="ROLE_ADMIN / ROLE_USER "  th:field="*{role}" /><br>
+     <label  class="register" th:each="e : ${#fields.errors('role')}" th:text="${e}" >  </label>
+        
+     <!--   <br><label>Select Role</label> <br> -->
+     
+       <br> <input type="submit" class="mybtn" value="Register">
+    
+    </form>
+
+
+<!-- <div class="img5">
+    <img src="courier2.png" height="400px">
+</div> -->
+
+    <footer>
+       <div class="name">Developed By : Ganesh Shinde</div> 
+    </footer>
+</body>
+</html>

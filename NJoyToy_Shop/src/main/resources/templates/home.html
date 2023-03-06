@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link href="/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="/css/2.png" >&nbsp;N JOY THE TOY</a>
+        <nav>
+            <ul>
+                <li><a th:href="@{/home}" class="active">Home</a></li>
+                <li><a th:href="@{/add}" >Add</a></li>
+            <!--    <li><a th:href="@{/update}" >Update</a></li>  -->
+                
+                <ul class="gani">
+                 <li><a th:href="@{/register}" id="space" >Register</a></li> 
+                <li><a th:href="@{/logout}" >Logout</a></li> 
+                </ul>
+            </ul>
+        </nav>
+    </header>
+   
+
+    <div class="aboutus">
+        <h1>
+            View TOYS
+        </h1>
+    </div>
+    
+
+    
+<div class="search">
+    <input type="text" class="id" id="myInput"
+    onkeyup="myFunction()"
+    placeholder="Serach by id..">
+    <input type="text" id="myInput1"
+    onkeyup="myFunction1()"
+    placeholder="Serach by name..">
+    <input type="text" id="myInput2"
+    onkeyup="myFunction2()"
+    placeholder="Serach by price..">
+    <input type="text" id="myInput3"
+    onkeyup="myFunction3()"
+    placeholder="Serach by quantity..">
+</div>
+
+
+
+    <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+        
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+        </script>
+        <script>
+            function myFunction1() {
+              // Declare variables
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myInput1");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("myTable");
+              tr = table.getElementsByTagName("tr");
+            
+              // Loop through all table rows, and hide those who don't match the search query
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                }
+              }
+            }
+            </script>
+            <script>
+                function myFunction2() {
+                  // Declare variables
+                  var input, filter, table, tr, td, i, txtValue;
+                  input = document.getElementById("myInput2");
+                  filter = input.value.toUpperCase();
+                  table = document.getElementById("myTable");
+                  tr = table.getElementsByTagName("tr");
+                
+                  // Loop through all table rows, and hide those who don't match the search query
+                  for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                      txtValue = td.textContent || td.innerText;
+                      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                      } else {
+                        tr[i].style.display = "none";
+                      }
+                    }
+                  }
+                }
+                </script>
+                <script>
+                    function myFunction3() {
+                      // Declare variables
+                      var input, filter, table, tr, td, i, txtValue;
+                      input = document.getElementById("myInput3");
+                      filter = input.value.toUpperCase();
+                      table = document.getElementById("myTable");
+                      tr = table.getElementsByTagName("tr");
+                    
+                      // Loop through all table rows, and hide those who don't match the search query
+                      for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[3];
+                        if (td) {
+                          txtValue = td.textContent || td.innerText;
+                          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                          } else {
+                            tr[i].style.display = "none";
+                          }
+                        }
+                      }
+                    }
+                    </script>
+    <!-- <div class="container"> -->
+
+        <!-- <div class="row"> -->
+            <!-- <table class="col-xs-7 table-bordered table-striped table-condensed table-fixed" id="myTable">   -->
+         <table id="myTable">
+                <thead>
+                <tr>
+                <th class="col">ID</th>
+                <th class="col">Name</th>
+                <th class="col">Price</th>
+                <th class="col">Quantity</th>
+                <th class="col" colspan="2">Manage</th>
+            </tr> 
+            </thead>
+            <tbody>
+            <tr th:each="toy:${toys}">
+             <td class="col" th:text="${toy.id}">1</td>
+             <td class="col" th:text="${toy.name}">Bat and Ball</td>
+             <td class="col" th:text="${toy.price}">545</td>
+             <td class="col" th:text="${toy.quantity}">34</td>
+           <!--  <td>  <input type="button" value="Update" id="button1" class="col">   </td>   -->
+           <td>
+           <a th:href ="@{/update/{id} (id=${toy.id})}">
+           <button id="button1" class="col">Update</button></a>
+           </td>  
+           <td>    
+           <a th:href ="@{/delete/{id} (id=${toy.id})}">
+           <button id="button2" class="col">Delete</button></a>
+           </td>  
+          
+          
+          <!--  <td><input type="submit" value="Delete" id="button2" class="col"></td>  -->
+             
+            </tr>
+
+            </tbody>
+         </table>
+        </div>
+
+    </div>
+
+    <footer>
+       <div>Developed By : GANESH SHINDE</div> 
+    </footer>
+
+
+
+
+</body>
+</html>

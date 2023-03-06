@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="/css/2.png" >&nbsp;N JOY THE TOY</a>
+        <nav>
+            <ul>
+               
+                <ul class="gani">
+                 
+                <li><a th:href="@{/login}" class="active">Login</a></li> 
+                </ul>
+            </ul>
+        </nav>
+    </header>
+   
+        <div class="loginimage">
+        <img src="/css/3.png">
+        
+    </div>
+    
+    
+    <form class="myform" id="loginpage" method="post"  action="#">
+    <br>
+    <h3 style="color: rgb(239, 100, 200);">Welcome to NJoy The Toy Shop</h2>
+    <br>
+        <a th:href="@{/register}" class="rg">Register Here    </a>
+        <a th:href="@{/logout}"  class="mybtn" value="login" style="padding:15px 25px 15px 25px;text-decoration:none">login</a></h6>
+    <br><br>
+    </form>
+
+<!-- <div class="img5">
+    <img src="courier2.png" height="400px">
+</div> -->
+
+    <footer>
+       <div class="name">Developed By : Ganesh Shinde</div> 
+    </footer>
+</body>
+</html>

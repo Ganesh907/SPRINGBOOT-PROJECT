@@ -1,0 +1,361 @@
+
+/* body */
+body{
+    margin:0%;
+    padding:0;
+    font-family: 'poppins',sans-serif;
+    background-color: rgb(249, 218, 255);
+}
+.rg{
+	font-size:small;
+	margin-right:10px;
+	text-decoration:none;
+}
+
+/* navbar */
+header{
+    padding: 5px;
+    background: rgb(237, 199, 252);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    position: fixed;
+    width: 98.5%;
+    margin: 10px;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+    margin-right: 5px;
+   
+}
+
+nav ul li a{
+    display: block;
+    margin: 0px 0;;
+    padding: 10px 20px;
+    text-decoration: none;
+    color:black;
+    
+}
+nav ul li a.active,nav ul li a:hover{
+    background: white;
+    color:rgb(162, 0, 255);
+    transition: 0.5s;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    border-radius: 10px;
+}
+
+.logo{
+    color: rgb(237, 199, 252);
+      color: rgb(237, 150, 255);
+    font-size: 30px;
+    line-height: 0px;
+    /* box-sizing: border-box; */
+    float: left;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    padding: 5px 20px;
+    background-color: white;  
+    margin-right: 100px;
+} 
+
+header .logo img{
+    height:28px;
+}
+
+/* for login tab in all page*/
+#space{
+	
+   margin-left: 480px; 
+}
+
+/* navbar-end */
+
+
+/* body-start */
+
+/* main name */
+.aboutus{
+    position: fixed;
+    left: 43%;
+    top: 13%;
+    text-align: center;
+    width: 200px;
+    background-color: white;
+    color: rgb(86, 27, 104);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+
+/* all forms */
+/* register page form*/
+.myform{
+    position: fixed;
+    top: 45%;
+    left: 10%;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    font-size: larger;
+    color: rgb(162, 0, 255);
+    line-height: 200%;
+    margin-left: 5%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgb(86, 27, 104);
+    border-radius: 5px;
+}
+.inp{
+    padding:9px;
+    width: 43%;
+    border: none;
+    color: rgb(86, 27, 104);
+    border-bottom: 2px solid rgb(237, 199, 252);
+    /* box-shadow:0px 1px ; */
+    border-radius:5px;
+    /* color:rgb(86, 27, 104); */
+    outline: none;
+    text-align: center;
+    box-shadow: 0 2px 2px rgb(86, 27, 104);
+     box-shadow: 0 2px 5px rgb(86, 27, 104);
+}
+.inp:hover{
+    box-shadow: 0 2px 5px rgb(86, 27, 104);
+     box-shadow: 0 2px 2px rgb(86, 27, 104); 
+}
+.inp .myClickState{
+    border: none;
+}
+#login{
+    margin-top: 30px;
+}
+::placeholder{
+
+color:rgb(86, 27, 104);
+display:none;
+}
+.mybtn{
+padding:5px;
+width:20%;
+/* color:white; */
+/* background:rgb(162, 0, 255); */
+/* background: rgb(249, 218, 255); */
+/* background-color: rgb(86, 27, 104); */
+border-radius:10px;
+border: none;
+padding: 10px;margin-bottom: 10px;
+box-shadow: 0 2px 5px rgb(86, 27, 104);
+background-color: rgb(236, 192, 244); 
+margin-bottom:20px;
+}
+.mybtn:hover{
+   
+background:white;
+	/* box-shadow: 0 2px 10px rgb(86, 27, 104); */
+/* box-shadow: none; */
+}
+
+/* login page form*/
+#loginpage{
+    position: fixed;
+    top: 58%;
+    left: 30%;
+}
+/* space for login form 1 input */
+
+#add{
+    position: fixed;
+    top: 30%;
+    left: 30%;
+}
+
+
+/* forms end */
+
+/* regiester */
+.div1{
+    margin-bottom: 20px;
+}
+#register{
+padding-top: 30px;
+}
+
+/* images */
+
+/* img of login page */
+.loginimage{
+    position: fixed;
+    left: 40%;
+    top: 11%;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 10px rgb(86, 27, 104);
+}
+.loginimage img{
+    height: 280px;
+    margin: 4px 2px 0px 2px;
+    padding: 5px;
+}
+
+/* end of images */
+
+
+/* footer */
+footer{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color:black;
+    font-size: small;
+}
+/* end of footer */
+
+
+ table{
+  position: fixed;
+  display: block;
+  height: 380px;
+  top: 30%;
+  left: 22.5%;
+  overflow-y: auto;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+  /* border: spacing 0px ; */
+border-collapse: separate;
+}
+ table th{
+  background-color: bisque;
+  position: sticky;
+  top: 2px;
+  /* padding:10px; */
+  padding: 10px 50px 10px 50px;
+  background-color: rgb(191, 148, 231);
+  box-shadow: 0 2px 2px rgba(0,0,0,.2);
+  /* border-radius: 5px; */
+}
+
+table tbody tr:hover{
+    color: white;
+    background-color:rgb(191, 148, 231);
+}
+ table td{
+    /* border: 1px dotted blue; */
+    /* padding: 10px; */
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    /* border: 1px solid black; */
+    
+}
+
+.name{
+    width: 100%;
+}
+
+    ::-webkit-scrollbar{
+        /* width: 10px; */
+        /* background-color: white; */
+    }
+    /* ::-webkit-scrollbar-thumb{
+        background-color: black;
+        border-radius: 9px;
+    } 
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: violet;
+        border-radius: 9px;
+    }  */
+
+.search{
+    position: fixed;
+    display: flex;
+    width: 100px;
+    /* justify-content: center; */
+    /* padding-right: -10px; */
+    left:21.5%;
+    /* padding-bottom: 20px; */
+    /* top: 26%; */
+    bottom: 8%;
+    /* margin: 0 5px; */
+    /* justify-content: space-evenly; */
+}
+.search input{
+    /* width: 50%; */
+    outline: none;
+    padding: 3px;
+    width: 100px;
+    /* height: 5px; */
+    margin: 0 15px;
+
+    /* margin-right: 50px; */
+    /* border: none; */
+    /* background-color:lightgray; */
+    /* margin-right: 70px; */
+}
+.id{
+     /* margin-right: -10px;  */
+}
+
+
+#button1{
+    background-color: rgb(244, 244, 134);
+    border: none;
+    color: rgb(77, 18, 77);
+    border-radius: 5px;
+    padding: 5px;
+    width: 90%;
+}
+#button1:hover,#button2:hover{
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    width: 100%;
+    background-color: white;
+}
+#button2{
+    background-color: rgb(243, 112, 112);
+    border: none;
+    color: rgb(77, 18, 77);
+    border-radius: 5px;
+    padding: 5px;
+    width: 90%;
+}
+label{
+		font-size:14px;
+
+	 color: rgb(86, 27, 104); 
+}
+.register{
+	font-size:14px;
+
+	
+	/* color: rgb(86, 27, 104); */
+color:red;
+   
+
+}
+
+.gani{
+	
+	position:fixed;
+	right:20px;
+
+}
+.toyform .inp,.toyform .mybtn{
+	  margin-top:20px; 
+}
+
+
+.error{
+position:fixed;
+bottom:13%;
+left:43%;
+font-size:15px;
+color: rgb(86, 27, 104);
+}
+#valid{
+font-size:100px;
+}
