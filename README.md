@@ -16,8 +16,7 @@ This is SpringBoot Web Application Project with Thymleaf and MYSQL Databse.
 The objectives of the "NJOY TOY SHOP" is :
 ------------------------------------------------
 
-	1)  -  to provide a application which handles the information of the toys.
-	2) -  to generate the bill of the total orders.
+	-  to provide a application which handles the information of the toys.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 In this application ADMIN can :
